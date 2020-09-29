@@ -1,3 +1,6 @@
+
+import firebase from "firebase";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDCootVNdmGN_rSqcjb_dmJ-YQDdeScuBg",
     authDomain: "chatapp-e8faa.firebaseapp.com",
@@ -8,3 +11,13 @@ const firebaseConfig = {
     appId: "1:254599987484:web:5a01ff9e94a60fa1273ad9",
     measurementId: "G-NMQ1GEC2P0"
   };
+
+  const firebaseApp = firebase.initializeApp (firebaseConfig);
+
+  const db = firebaseApp.firestore();
+
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  export {auth, provider};
+  export default db;
