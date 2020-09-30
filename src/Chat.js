@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 function Chat() {
     const [seed, setSeed] = useState("");
     const [input, setInput] = useState("");
-    const { roomId } = useParams ();
+    const { MyId } = useParams ();
 
     useEffect(() => {
         setSeed(Math.floor(Math.random() * 5000));
